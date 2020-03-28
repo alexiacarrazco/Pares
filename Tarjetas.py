@@ -1,6 +1,8 @@
 import random
+import argparse
 
-def baraj(figuras, diccionario):
+
+def baraj(figuras, diccionario_cartas):
     lista_cartas = []
     for figura in figuras:
         for carta, valor in diccionario_cartas.items():
@@ -9,11 +11,11 @@ def baraj(figuras, diccionario):
             lista_cartas.append(carta)
     return lista_cartas
 
-class Jugador: 
+class Judador: 
     def _init_(self, nombre, mano):
         self.nombre = nombre
         self.mano = mano
-    def despliega_mano(self):
+    def despliega_mano(jugador):
         print(self.nombre)
         for x in self.mano:
             print(x)
@@ -24,10 +26,9 @@ class Carta:
     def _init_(self, valor, figura):
         self.valor=valor
         self.figura=figura
-    def _str_(jugador):
+    def _str_(self):
         self.carta=self.valor+self.figura;
         return self.carta
-        
 
 class Baraja:
     def _init_(self):
@@ -55,4 +56,4 @@ class Baraja:
         return mano
         
     def guarda_jugador(manos,jugador):
-        manos.lista_jugadores.append(jugador);
+        manos.lista_jugadores.append(jugador)
